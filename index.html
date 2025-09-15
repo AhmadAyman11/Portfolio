@@ -17,6 +17,13 @@
         <div class="nav-container">
             <div class="nav-content">
                 <a href="#hero" class="nav-logo">Portfolio</a>
+
+                <!-- Hamburger button -->
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars active"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
                 <div class="nav-links">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#certificates" class="nav-link">Certificates</a>
@@ -27,6 +34,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
@@ -349,7 +357,8 @@
                     <h3 class="contact-subtitle">Open to opportunities and collaborations.</h3>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRzDshHtxjnrWgMnrsKfxcGkQXmGhTvxHBvNzxXKTnWmkkSJHxPrrtHXddgzNlhmmRJnXnnL"
+                                target="_blank"><i class="fas fa-envelope"></i></a>
                             <span>ahamd2ayman@gmail.com</span>
                         </div>
                         <div class="contact-item">
@@ -376,19 +385,7 @@
         </div>
     </section>
 
-    <script>
-        // Simple animation for skill bars
-        document.addEventListener('DOMContentLoaded', function () {
-            const skillBars = document.querySelectorAll('.skill-level');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 500);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

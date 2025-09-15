@@ -72,6 +72,10 @@ html {
     transform: scale(1.1);
 }
 
+.hamburger {
+    display: none;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -511,8 +515,63 @@ html {
 
 @media (max-width: 480px) {
 
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+
+    .hamburger i {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        opacity: 0;
+        transition: 0.3s ease;
+        color: #4f46e5;
+    }
+
+    .hamburger i.active {
+        opacity: 1;
+    }
+
     .nav-links {
         display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+    }
+
+    .nav-link:hover {
+        transform: none;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
     }
 
     .hero-title {
@@ -538,5 +597,4 @@ html {
     .about .about-details {
         display: none;
     }
-
 }
